@@ -1,57 +1,51 @@
 import React from "react";
-import { View, Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createStackNavigator } from "@react-navigation/stack";
-
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-import HomeNavigation from "./HomeNavigation";
-import CursoNavigation from "./CursoNavigation";
-import EstadisticaNavigation from "./EstadisticaNavigation";
-import PerfilNavigation from "./PerfilNavigation";
+import { HomeStackNavigator, CursoStackNavigator, EstadistStackNavigator, PerfilStackNavigator } from './stack/StackNavigator';
 
 
 const Tab = createBottomTabNavigator();
 
-function Navigation() {
+const BottomTabNavigator = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
         name="Home"
-        component={HomeNavigation}
+        component={HomeStackNavigator}
         options={{
           tabBarLabel: "Home",
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ size }) => (
             <Icon name="home" color='#B4E0FD' size={size} />
           ),
         }}
       />
       <Tab.Screen
         name="Curso"
-        component={CursoNavigation}
+        component={CursoStackNavigator}
         options={{
           tabBarLabel: "Cursos",
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ size }) => (
             <Icon name="book" color='#AFE5DC' size={size} />
           ),
         }}
       />
       <Tab.Screen
         name="Estadistica"
-        component={EstadisticaNavigation}
+        component={EstadistStackNavigator}
         options={{
           tabBarLabel: "Estadistica",
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ size }) => (
             <Icon name="chart-bar" color='#EECFE7' size={size} />
           ),
         }}
       />
       <Tab.Screen
         name="Perfil"
-        component={PerfilNavigation}
+        component={PerfilStackNavigator}
         options={{
           tabBarLabel: "Perfil",
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: ({ size }) => (
             <Icon name="user" color='#FAE7A8'  size={size} />
           ),
         }}
@@ -61,4 +55,4 @@ function Navigation() {
 }
 
 
-export default Navigation;
+export default BottomTabNavigator;

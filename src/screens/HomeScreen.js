@@ -15,7 +15,7 @@ export default function HomeScreen() {
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.contentHome}>
-          <Text style={styles.textHome}>Hola, Carlos!</Text>
+          <Text style={styles.textHome}>Hola, Eduardo!</Text>
           <Search />
           <ScrollView showsHorizontalScrollIndicator={false}>
             <SectionHeader 

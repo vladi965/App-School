@@ -8,9 +8,7 @@ import { LIST_CURSOS } from '../Data/cursos';
 export default function CursosScreen() {
   return (
     <View style={styles.contentCurso}>
-      <TopCursos 
-      list={LIST_CURSOS}
-      />
+      <TopCursos list={LIST_CURSOS} />
     </View>
   )
 }

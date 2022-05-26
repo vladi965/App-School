@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import {View, FlatList, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity } from "react-native";
+import {View, FlatList, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import ButtonPrincipal from "../components/ButtonPrincipal";
+import { useNavigation } from '@react-navigation/native';
+
 
 const DATA = [
   {
@@ -32,12 +36,12 @@ const Item = ({ item, onPress, backgroundColor, textColor}) => (
 
 const GridList = () => {
   const [selectedId, setSelectedId] = useState(null);
+  const navigation = useNavigation();
 
   const renderItem = ({ item }) => {
     const backgroundColor = item.id === selectedId ? "#7460F2" : "#ffffff";
     const color = item.id === selectedId ? 'white' : 'black';
     
-
     return (
       <Item
         item={item}
@@ -50,18 +54,28 @@ const GridList = () => {
 
   return (
     <SafeAreaView>
-      <FlatList
-        data={DATA}
-        numColumns={2}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        extraData={selectedId}
-      />
+      <View>
+        <FlatList
+          data={DATA}
+          numColumns={2}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id}
+          extraData={selectedId}
+        />
+      </View>
+      <View style={styles.container}>
+        <ButtonPrincipal title="Ingresar" onPress={() => navigation.navigate('TabNavigator')}/>
+      </View>
     </SafeAreaView>
   );
 };
 
+
 const styles = StyleSheet.create({
+  container:{
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   item: {
     height: 80,
     width: 150,

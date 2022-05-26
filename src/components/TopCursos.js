@@ -7,12 +7,15 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 const CARD_WIDTH = 400;
 const CARD_HEIGHT = 125;
 const CARD_HEIGHT_SPACING = 35;
 
 const TopCursos = ({ list }) => {
+  const navigation = useNavigation();
+
   return (
     <View>
       <FlatList
@@ -23,7 +26,7 @@ const TopCursos = ({ list }) => {
         keyExtractor={(i) => i.id}
         renderItem={({ item, index }) => {
           return (
-            <TouchableOpacity 
+            <TouchableOpacity onPress={() => navigation.navigate('TemasScreen')}
               style={{
                 marginTop: 15,
                 marginRight: index == list.length - 1 ? 30 : 30,
