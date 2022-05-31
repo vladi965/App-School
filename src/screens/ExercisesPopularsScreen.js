@@ -10,7 +10,7 @@ export default function ExercisesPopularsScreen() {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} >
         <View style={styles.contentSearch}>
           <Search />
           <View style={styles.topexercises}>

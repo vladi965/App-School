@@ -8,7 +8,7 @@ const CARD_WIDTH_SPACING = 60;
 const TopExercisesPopulars = ({ list }) => {
   return (
     <View>
-        <FlatList 
+        <FlatList scrollEnabled={false}
             data={list}
             vertical
             numColumns={2}

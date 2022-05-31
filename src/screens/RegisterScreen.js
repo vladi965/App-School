@@ -7,13 +7,33 @@ import ButtonPrincipal from "../components/ButtonPrincipal";
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
+import { authentication } from "../../services/firebase-config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 const RegisterScreen = () => {
   const navigation = useNavigation();
 
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+/*   const [confirmPassword, setConfirmPassword] = useState(''); */
   const [visible, setVisibility] = React.useState({ name: "eye-off" });
+
+
+  const RegisterUser = () => {
+    createUserWithEmailAndPassword(authentication, email, password)
+    .then((userCredential) => {
+      console.log('Cuenta Creada');
+      const user = userCredential.user;
+      console.log(user);
+    })
+    .catch((error) => {
+      console.error(error);
+      Alert.alert(error.message)
+    })
+  };
+
 
   //Toggles the eye icon to show the password
   const ToggleVisibility = () => {
@@ -33,7 +53,7 @@ const RegisterScreen = () => {
     }
   };
 
-  //Handles email input
+/*   //Handles email input
   const handleEmailChange = (text) => {
     setEmail(text);
   };
@@ -50,8 +70,16 @@ const RegisterScreen = () => {
 
   //Handles sign up
   const handleSubmit = async () => {
-    console.log('User signed up!')
-  };
+    if(email === "" && password !== confirmPassword && password === "" && confirmPassword === "") {
+      console.log("Invalid Credentials");
+    } else {
+      try {
+        await handleSignUp(email, password);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  }; */
 
   return (
     <SafeAreaView style={styles.container}>
@@ -64,7 +92,7 @@ const RegisterScreen = () => {
               placeholder="Correo Electronico"
               placeholderTextColor="#7460F2"
               defaultValue={email}
-              onChangeText={handleEmailChange}
+              onChangeText={text => setEmail(text)}
               textContentType="emailAddress"
               keyboardType="email-address"
               returnKeyType="next"
@@ -75,7 +103,7 @@ const RegisterScreen = () => {
                 placeholder="Contraseña"
                 placeholderTextColor="#7460F2"
                 defaultValue={password}
-                onChangeText={handlePasswordChange}
+                onChangeText={text => setPassword(text)}
                 secureTextEntry={secureTextEntry()}
                 returnKeyType= "next"
                 textContentType= "password"
@@ -90,7 +118,7 @@ const RegisterScreen = () => {
                 onPress={ToggleVisibility}
               />
             </View>
-            <TextInput
+            {/* <TextInput
               style={styles.textInput}
               defaultValue={confirmPassword}
               onChangeText={handleConfirmPasswordChange}
@@ -101,9 +129,9 @@ const RegisterScreen = () => {
               textContentType="password"
               keyboardType="default"
               autoCorrect={false}
-            />
+            /> */}
           </View>
-          <ButtonPrincipal title="Crear Cuenta" onPress={handleSubmit} />
+          <ButtonPrincipal title="Crear Cuenta" onPress={RegisterUser} />
           <View style={styles.contentRegistrar}>
             <Text style={styles.TextRegistrarOne}>¿Ya tiene cuenta?</Text>
             <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>

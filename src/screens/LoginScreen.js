@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import React, { useState, useContext } from "react";
+import { View, Text, Image, TextInput, TouchableOpacity, Alert } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ButtonPrincipal from "../components/ButtonPrincipal";
 import ButtonGoogle from "../components/ButtonGoogle";
@@ -9,14 +9,38 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 
+import { authentication } from "../../services/firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
+
+//Google
+import * as Google from 'expo-google-app-auth';
+
+//Facebook
+
 const logo = require("../assets/general/atomo.png");
 
 export default function LoginScreen() {
   const navigation = useNavigation();
 
+  //Text input states
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [visible, setVisibility] = React.useState({ name: "eye-off" });
+
+
+  const SignInUser = () => {
+    signInWithEmailAndPassword(authentication, email, password)
+     .then((userCredential) => {
+        console.log("Welcome a AppSchool!")
+        Alert.alert('Welcome a AppSchool!')
+        const user = userCredential.user;
+        console.log(user)
+        navigation.navigate('SelectionScreen');
+     })
+     .catch((error) => {
+        console.log(error);
+     })
+  }
 
   //Toggles the eye icon to show the password
   const ToggleVisibility = () => {
@@ -30,26 +54,17 @@ export default function LoginScreen() {
   //Handles password visibility when the eye icon is pressed
   const secureTextEntry = () => {
     if(visible.name === "eye"){
-      return true;
-    } else if (visible.name === "eye-off"){
       return false;
+    } else if (visible.name === "eye-off"){
+      return true;
     }
   };
 
-  //Handles email input
-  const handleEmailChange = (text) => {
-    setEmail(text);
-  };
+  
+  //Google SignIn
 
-  //Handles password input
-  const handlePasswordChange = (text) => {
-    setPassword(text);
-  };
+  //Facebook SignIn
 
-  const handleSignInClick = async () => {
-    await handleSignIn(email, password);
-    console.log("Login successful");
-  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -60,18 +75,19 @@ export default function LoginScreen() {
           <Text style={styles.title}>Iniciar Sesion</Text>
           <View style={styles.contentInput}>
             <TextInput
-              value={email}
-              onChangeText={(text) => setEmail(text)}
+              defaultValue={email}
+              onChangeText={text => setEmail(text)}
               style={styles.textInput}
+              textContentType= "emailAddress"
               placeholder="Correo Electronico"
               placeholderTextColor="#7460F2"
+              returnKeyType="next"
             />
             <View style={styles.passwordContainer}>
             <TextInput
-              value={password}
-              style={styles.textInput}
               defaultValue={password}
-              onChangeText={handlePasswordChange}
+              style={styles.textInput}
+              onChangeText={text => setPassword(text)}
               placeholder="Contraseña"
               placeholderTextColor="#7460F2"
               returnKeyType="go"
@@ -91,8 +107,11 @@ export default function LoginScreen() {
           </View>
           <ButtonPrincipal title="Ingresar" onPress={() => navigation.navigate('SelectionScreen')} />
           <View style={styles.contentPrincipal}>
-            <ButtonGoogle title="Google" />
+
+            <ButtonGoogle title="Google"/>
+
             <ButtonFacebook title="Facebook"/>
+            
           </View>
           <View style={styles.contentRegistrar}>
             <Text style={styles.TextRegistrarOne}>¿No tiene cuenta?</Text>

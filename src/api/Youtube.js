@@ -17,8 +17,8 @@ export default function Youtube() {
     }, []);
 
   return (
-    <View>
-      <YoutubePlayer 
+    <View style={{ marginTop: 10 }}>
+      <YoutubePlayer
         height={400}
         play={playing}
         videoId={"UcLiO6yLJ3s"}

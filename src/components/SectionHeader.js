@@ -1,12 +1,14 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
+import { useNavigation } from '@react-navigation/native';
 
 const SectionHeader = ({ title }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
-      <TouchableOpacity>                 
+      <TouchableOpacity onPress={() => navigation.navigate('ExercisesPopularsScreen')}>                 
         <Icon name="arrow-alt-circle-right" color="#7460F2" size={22}/>
       </TouchableOpacity>
     </View>

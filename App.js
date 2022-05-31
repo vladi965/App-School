@@ -10,6 +10,8 @@ LogBox.ignoreLogs([
 "ViewPropTypes will be removed",
 ])
 
+
+
 export default function App() {
   return (
     <NavigationContainer>

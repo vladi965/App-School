@@ -17,55 +17,112 @@ import BottomTabNavigator from "../BottomTabNavigator";
 const Stack = createStackNavigator();
 
 const HomeStackNavigator = () => {
-  return(
-    <Stack.Navigator>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown: false}} />
-    </Stack.Navigator>
-  );
-}
-
-const CursoStackNavigator = () => {
-  return(
-    <Stack.Navigator>
-      <Stack.Screen name="CursosScreen" component={CursosScreen} />
-    </Stack.Navigator>
-  );
-}
-
-
-const EstadistStackNavigator = () => {
-  return(
-    <Stack.Navigator>
-      <Stack.Screen name="EstadisticaScreen" component={EstadisticaScreen} />
-    </Stack.Navigator>
-  )
-}
-
-
-const PerfilStackNavigator = () => {
-  return(
-    <Stack.Navigator>
-      <Stack.Screen name="PerfilScreen" component={PerfilScreen} />
-    </Stack.Navigator>
-  )
-}
-
-
-
-export default MainStackNavigator = () => {
   return (
-      <Stack.Navigator>
-          <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown: false}} />
-          <Stack.Screen name="RegisterScreen" component={RegisterScreen}  options={{headerShown: false}} />
-          <Stack.Screen name="SelectionScreen" component={SelectionScreen} options={{headerShown: false}} />
-          <Stack.Screen name="TabNavigator" component={BottomTabNavigator} />
-        {/*  />
-       
-        <Stack.Screen name="ExercisesPopularsScreen" component={ExercisesPopularsScreen} />
-        <Stack.Screen name="VideosPopularsScreen" component={VideosPopularsScreen} />
-        <Stack.Screen name= "TemasScreen" component={TemasScreen} /> */}
-      </Stack.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
   );
 };
 
-export {  HomeStackNavigator, CursoStackNavigator, EstadistStackNavigator, PerfilStackNavigator };
+const CursoStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="CursosScreen"
+        component={CursosScreen}
+        options={{
+          title: "Cursos",
+          headerTitleStyle: {
+            textAlign: "center",
+            color: "#fff",
+          },
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const EstadistStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="EstadisticaScreen"
+        component={EstadisticaScreen}
+        options={{
+          title: "Estadistica",
+          headerTitleStyle: {
+            textAlign: "center",
+            color: "#fff",
+          },
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+const PerfilStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="PerfilScreen" component={PerfilScreen} />
+    </Stack.Navigator>
+  );
+};
+
+export default MainStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RegisterScreen"
+        component={RegisterScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SelectionScreen"
+        component={SelectionScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="TabNavigator"
+        component={BottomTabNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ExercisesPopularsScreen"
+        component={ExercisesPopularsScreen}
+        options={{
+          title: "Ejercicios Populares",
+          headerTitleStyle: {
+            textAlign: "center",
+            color: "#fff",
+          },
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+
+    </Stack.Navigator>
+  );
+};
+
+export {
+  HomeStackNavigator,
+  CursoStackNavigator,
+  EstadistStackNavigator,
+  PerfilStackNavigator,
+};

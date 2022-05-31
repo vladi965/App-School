@@ -157,7 +157,7 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   contentSearch: {
-    marginTop: 40,
+    marginTop: 5,
   },
   search: {
     height: 56,
