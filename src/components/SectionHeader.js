@@ -6,8 +6,8 @@ const SectionHeader = ({ title }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
-      <TouchableOpacity>                 
-        <Icon name="arrow-alt-circle-right" color="#7460F2" size={22}/>
+      <TouchableOpacity>
+        <Icon name="arrow-alt-circle-right" color="#7460F2" size={22} />
       </TouchableOpacity>
     </View>
   );
@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   button: {
-    backgroundColor: 'white',
-    color: 'blue',
+    backgroundColor: "white",
+    color: "blue",
     borderRadius: 5,
     height: 60,
   },

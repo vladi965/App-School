@@ -2,8 +2,10 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-import { HomeStackNavigator, CursoStackNavigator, EstadistStackNavigator, PerfilStackNavigator } from './stack/StackNavigator';
-
+import HomeStackNavigator from "./HomeNavigation";
+import CursoStackNavigator from "./CursoNavigation";
+import PerfilStackNavigator from "./PerfilNavigation";
+import EstadistStackNavigator from "./EstadisticaNavigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -16,7 +18,7 @@ const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ size }) => (
-            <Icon name="home" color='#B4E0FD' size={size} />
+            <Icon name="home" color="#B4E0FD" size={size} />
           ),
         }}
       />
@@ -26,7 +28,7 @@ const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Cursos",
           tabBarIcon: ({ size }) => (
-            <Icon name="book" color='#AFE5DC' size={size} />
+            <Icon name="book" color="#AFE5DC" size={size} />
           ),
         }}
       />
@@ -36,7 +38,7 @@ const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Estadistica",
           tabBarIcon: ({ size }) => (
-            <Icon name="chart-bar" color='#EECFE7' size={size} />
+            <Icon name="chart-bar" color="#EECFE7" size={size} />
           ),
         }}
       />
@@ -46,13 +48,12 @@ const BottomTabNavigator = () => {
         options={{
           tabBarLabel: "Perfil",
           tabBarIcon: ({ size }) => (
-            <Icon name="user" color='#FAE7A8'  size={size} />
+            <Icon name="user" color="#FAE7A8" size={size} />
           ),
         }}
       />
     </Tab.Navigator>
   );
-}
-
+};
 
 export default BottomTabNavigator;

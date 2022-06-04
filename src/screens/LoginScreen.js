@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
@@ -9,8 +9,8 @@ import ButtonPrincipal from "../components/ButtonPrincipal";
 import ButtonGoogle from "../components/ButtonGoogle";
 import ButtonFacebook from "../components/ButtonFacebook";
 import { styles } from "../styles/GlobalStyles";
-
-
+import { signIn } from "../../services/Firebase";
+//import Context from "../context/Context";
 const logo = require("../assets/general/atomo.png");
 
 export default function LoginScreen() {
@@ -18,8 +18,9 @@ export default function LoginScreen() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [visible, setVisibility] = React.useState({ name: "eye-off" });
+  const [visible, setVisibility] = useState({ name: "eye-off" });
 
+  //const {} = useContext(Context)
   //Toggles the eye icon to show the password
   const ToggleVisibility = () => {
     if (visible.name === "eye") {
@@ -49,8 +50,15 @@ export default function LoginScreen() {
   };
 
   const handleSignInClick = async () => {
-    await handleSignIn(email, password);
-    console.log("Login succesful");
+    const user = await signIn(email, password);
+    console.log("User logged in!", user.email);
+    // signIdentials.user;
+    //     navigation.navigate("SelectionScreen");
+    //     console.log("User logged in!", unWithEmailAndPassword(auth, email, password)
+    //   .then((userCredentials) => {
+    //     const user = userCreser.email);
+    //   })
+    //   .catch((err) => alert(err.message));
   };
 
   return (
@@ -93,7 +101,7 @@ export default function LoginScreen() {
             </View>
             <ButtonPrincipal
               title="Ingresar"
-              onPress={() => navigation.navigate("SelectionScreen")}
+              onPress={() => handleSignInClick()}
             />
             <View style={styles.contentPrincipal}>
               <ButtonGoogle title="Google" />

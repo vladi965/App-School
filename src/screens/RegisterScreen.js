@@ -9,11 +9,13 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { styles } from "../styles/GlobalStyles";
-import ButtonPrincipal from "../components/ButtonPrincipal";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 import { auth } from "../../services/Firebase";
+import { styles } from "../styles/GlobalStyles";
+import ButtonPrincipal from "../components/ButtonPrincipal";
 
 const RegisterScreen = () => {
   const navigation = useNavigation();
@@ -58,10 +60,10 @@ const RegisterScreen = () => {
 
   //Handles sign up
   const handleSubmit = () => {
-    auth
-      .createUserWithEmailAndPassword(email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         const user = userCredentials.user;
+        navigation.navigate("LoginScreen");
         console.log("User signed up!", user.email);
       })
       .catch((err) => alert(err.message));

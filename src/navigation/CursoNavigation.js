@@ -14,11 +14,11 @@ export default function CursoNavigation() {
           title: "Cursos",
           headerTitleStyle: {
             textAlign: "center",
-            color: '#fff',
+            color: "#fff",
           },
           headerStyle: {
-            backgroundColor: "#7460F2"
-          }
+            backgroundColor: "#7460F2",
+          },
         }}
       />
     </Stack.Navigator>
