@@ -7,8 +7,10 @@ import {
   Image,
 } from "react-native";
 import React from "react";
+import { useNavigation } from '@react-navigation/native';
 
 const TopListContent = ({ list }) => {
+  const navigation = useNavigation();
   return (
     <View>
       <FlatList
@@ -18,7 +20,7 @@ const TopListContent = ({ list }) => {
         keyExtractor={(i) => i.id}
         renderItem={({ item, index }) => {
           return (
-            <TouchableOpacity
+            <TouchableOpacity onPress={() => navigation.navigate('TemaContenidoScreen')}
               style={{
                 marginLeft: 15,
                 marginRight: index == list.length - 1 ? 15 : 10,

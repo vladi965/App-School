@@ -1,9 +1,12 @@
 import React from 'react'
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
+
 
 const CARD_HEIGHT_SPACING = 30;
 
 const TopTemaContenido = ({ list }) => {
+    const navigation = useNavigation();
   return (
     <View>
       <FlatList 
@@ -15,7 +18,7 @@ const TopTemaContenido = ({ list }) => {
         keyExtractor={(i) => i.id}
         renderItem={({ item, index }) => {
             return (
-                <TouchableOpacity
+                <TouchableOpacity onPress={() => {navigation.navigate('TeoriaStack')}}
                     style={{ 
                         marginLeft: 15,
                         marginRight: index == list.length - 1 ? 30 : 30,
@@ -42,9 +45,9 @@ const TopTemaContenido = ({ list }) => {
 
 const styles = StyleSheet.create({
     contentCard:{
-        marginTop: 45,
+        marginTop: 5,
+        marginBottom: 15,
         backgroundColor: "#fff",
-        height: 200,
         marginHorizontalRight: 20,
         marginHorizontalLeft: 20,
 

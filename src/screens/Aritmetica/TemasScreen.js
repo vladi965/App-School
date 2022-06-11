@@ -8,12 +8,10 @@ import {LIST_TEMAS_ARITMETICA} from '../../Data/Aritmetica/Temas';
 const TemasScreen = () => {
   return (
     <SafeAreaView>
-    <View>
       <Text style={styles.temaStyle}>Temas</Text>
       <View>
        <TopListContent list={LIST_TEMAS_ARITMETICA} />
       </View>
-    </View>
     </SafeAreaView>
   )
 }

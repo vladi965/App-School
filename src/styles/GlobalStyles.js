@@ -105,6 +105,9 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: myColors.btnviolet,
   },
+  contentTop:{
+    marginTop: -40
+  },
   //Registrar
   textRegister: {
     fontSize: 30,
@@ -196,10 +199,10 @@ export const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginHorizontal: 15,
-    marginTop: 15,
     marginBottom: 15,
   },
   ViewContent: {
+    height: '100%',
     backgroundColor: "#fff",
   },
   //Previo del Examen
@@ -249,5 +252,43 @@ export const styles = StyleSheet.create({
     color: '#000',
     fontWeight: "bold",
     fontSize: 16,
-  }  
+  },
+  //Curso Aritmetica
+  // Teoria
+  viewSecund:{
+    marginHorizontal: 12
+  },
+  titleText:{
+    textAlign: 'justify',
+    lineHeight: 20
+
+  },
+  contentImage:{
+    marginTop: 10,
+    marginBottom: 15,
+    textAlign: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+  },
+  img1:{
+    width: 320,
+    height: 257,
+    
+  },
+  textTwo:{
+    marginTop: 20,
+  },
+  pt1:{
+    fontSize: 18,
+    fontWeight: "bold",
+    color: '#7460F2'
+  },
+  pt2:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'left',
+   
+  },
+ 
 });

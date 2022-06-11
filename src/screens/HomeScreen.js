@@ -8,6 +8,8 @@ import SectionHeaderTwo from '../components/SectionHeaderTwo';
 import Youtube from "../api/Youtube";
 import Search from '../components/Search';
 import { TOP_EXERCISES } from '../Data/exercises';
+import Carousel from '../components/Carousel';
+import { CAROUSEL } from '../Data/carousel_Home';
 
 export default function HomeScreen() {
   return (
@@ -17,6 +19,9 @@ export default function HomeScreen() {
         <View style={styles.contentHome}>
           <Text style={styles.textHome}>Hola, Eduardo!</Text>
           <Search />
+          <View>
+            <Carousel data={CAROUSEL} />
+          </View>
           <ScrollView showsHorizontalScrollIndicator={false}>
             <SectionHeader 
               title="Ejercicios Populares"

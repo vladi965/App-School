@@ -1,9 +1,11 @@
 import React, { useState, useContext } from "react";
 import { View, Text, Image, TextInput, TouchableOpacity, Alert } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+// -- Button Principal -- //
 import ButtonPrincipal from "../components/ButtonPrincipal";
 import ButtonGoogle from "../components/ButtonGoogle";
 import ButtonFacebook from "../components/ButtonFacebook";
+// -- Styles -- //
 import { styles } from "../styles/GlobalStyles";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { useNavigation } from '@react-navigation/native';
@@ -12,11 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { authentication } from "../../services/firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-//Google
-import * as Google from 'expo-google-app-auth';
-
-//Facebook
-
+//Logo
 const logo = require("../assets/general/atomo.png");
 
 export default function LoginScreen() {
@@ -107,11 +105,8 @@ export default function LoginScreen() {
           </View>
           <ButtonPrincipal title="Ingresar" onPress={() => navigation.navigate('SelectionScreen')} />
           <View style={styles.contentPrincipal}>
-
             <ButtonGoogle title="Google"/>
-
             <ButtonFacebook title="Facebook"/>
-            
           </View>
           <View style={styles.contentRegistrar}>
             <Text style={styles.TextRegistrarOne}>¿No tiene cuenta?</Text>

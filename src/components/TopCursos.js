@@ -15,7 +15,7 @@ const CARD_HEIGHT_SPACING = 35;
 
 const TopCursos = ({ list }) => {
   const navigation = useNavigation();
-
+  
   return (
     <View>
       <FlatList
