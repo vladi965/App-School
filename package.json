@@ -20,7 +20,9 @@
     "@ui-kitten/components": "^5.1.2",
     "expo": "^45.0.0",
     "expo-application": "^4.1.0",
+    "expo-font": "~10.1.0",
     "expo-google-app-auth": "~8.3.0",
+    "expo-splash-screen": "~0.15.1",
     "expo-status-bar": "~1.3.0",
     "firebase": "^9.6.11",
     "react": "17.0.2",
@@ -42,7 +44,8 @@
     "react-native-web": "0.17.7",
     "react-native-webview": "11.18.1",
     "react-native-youtube": "^2.0.2",
-    "react-native-youtube-iframe": "^2.2.2"
+    "react-native-youtube-iframe": "^2.2.2",
+    "simple-react-native-emoji": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

@@ -2,11 +2,10 @@ import React from 'react'
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
 
-
 const CARD_HEIGHT_SPACING = 30;
 
 const TopTemaContenido = ({ list }) => {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <View>
       <FlatList 
@@ -42,7 +41,6 @@ const TopTemaContenido = ({ list }) => {
   )
 }
 
-
 const styles = StyleSheet.create({
     contentCard:{
         marginTop: 5,
@@ -50,7 +48,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         marginHorizontalRight: 20,
         marginHorizontalLeft: 20,
-
     },
     card: {
         backgroundColor: '#fff',

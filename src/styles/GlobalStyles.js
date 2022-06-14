@@ -108,6 +108,18 @@ export const styles = StyleSheet.create({
   contentTop:{
     marginTop: -40
   },
+  emoji:{
+    height: 40,
+    width: 40,
+    fontSize: 25,
+    marginLeft: 10
+  },
+  contentTitle:{
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
+  },
   //Registrar
   textRegister: {
     fontSize: 30,
@@ -158,6 +170,7 @@ export const styles = StyleSheet.create({
   textHome: {
     fontSize: 30,
     fontWeight: "bold",
+    marginLeft: -70
   },
   contentSearch: {
     marginTop: 5,
@@ -274,8 +287,8 @@ export const styles = StyleSheet.create({
   img1:{
     width: 320,
     height: 257,
-    
   },
+  
   textTwo:{
     marginTop: 20,
   },
@@ -288,7 +301,94 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'left',
-   
   },
+  //Estadistica
+  contentBoxTwo:{
+    width: 165,
+    height: 160,
+    margin: 10,
+    backgroundColor: '#fff',
+    elevation: 7,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  contentBoxDirection:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: 25
+  },
+  textp1:{
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  ContentPrimaryCircle:{
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  circleContent:{
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  one:{
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  r1:{
+    fontSize: 10,
+    fontWeight: 'bold',
+    marginRight: 2
+  },
+  imgcircle:{
+    marginRight: 3
+  },
+  opContent:{
+    marginBottom: 80
+  },
+  h5:{
+    marginTop: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imagenStadistc:{
+    height: 70,
+    width: 70,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#AFE5DC',
+    borderRadius: 50,
+  },
+  imagenStadistc2:{
+    height: 70,
+    width: 70,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FAE7A8',
+    borderRadius: 50,
+  },
+  imagen:{
+    height: 40,
+    width: 40
+  },
+  img3:{
+    height: 180,
+    width: 210
+  },
+  one1:{
+    fontSize: 25,
+    color: '#5184DD',
+    fontWeight: 'bold',
+  },
+  one2:{
+    fontSize: 25,
+    color: '#F43838',
+    fontWeight: 'bold',
+  }
  
 });
