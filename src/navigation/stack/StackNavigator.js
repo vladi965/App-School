@@ -13,6 +13,7 @@ import EstadisticaScreen from "../../screens/EstadisticaScreen";
 import PerfilScreen from "../../screens/PerfilScreen";
 import TemaContenidoScreen from "../../screens/TemaContenidoScreen";
 import VideosYoutubeList from "../../screens/VideosYoutubeList";
+/* import SplashScreenLogo from "../../screens/SplashScreenLogo"; */
 
 //Contenido Aritmetica
 import TeoriaStack from "../../screens/Aritmetica/TeoriadeConjunto/TeoriaStack";
@@ -25,7 +26,6 @@ import ExamenStack from "../../screens/Aritmetica/TeoriadeConjunto/ExamenStack";
 import BottomTabNavigator from "../BottomTabNavigator";
 
 const Stack = createStackNavigator();
-
 
 const HomeStackNavigator = () => {
   return (
@@ -47,7 +47,7 @@ const CursoStackNavigator = () => {
         component={CursosScreen}
         options={{
           title: "Cursos",
-          headerTintColor: '#fff',
+          headerTintColor: "#fff",
           headerTitleAlign: "center",
           headerStyle: {
             backgroundColor: "#7460F2",
@@ -66,10 +66,8 @@ const EstadistStackNavigator = () => {
         component={EstadisticaScreen}
         options={{
           title: "Estadistica",
-          headerTitleStyle: {
-            textAlign: "center",
-            color: "#fff",
-          },
+          headerTintColor: "#fff",
+          headerTitleAlign: "center",
           headerStyle: {
             backgroundColor: "#7460F2",
           },
@@ -82,15 +80,28 @@ const EstadistStackNavigator = () => {
 const PerfilStackNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="PerfilScreen" component={PerfilScreen} />
+      <Stack.Screen name="PerfilScreen" component={PerfilScreen} 
+        options={{
+          title: "Perfil",
+          headerTintColor: "#fff",
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 };
 
-
 export default MainStackNavigator = () => {
   return (
     <Stack.Navigator>
+      {/*  <Stack.Screen
+        name="SplashScreenLogo"
+        component={SplashScreenLogo}
+        options={{ headerShown: false }}
+      />  */}
       <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}
@@ -117,7 +128,7 @@ export default MainStackNavigator = () => {
         options={{
           title: "Ejercicios Populares",
           headerTitleAlign: "center",
-          headerTintColor: '#fff',
+          headerTintColor: "#fff",
           headerStyle: {
             backgroundColor: "#7460F2",
           },
@@ -129,7 +140,7 @@ export default MainStackNavigator = () => {
         options={{
           title: "Videos Populares",
           headerTitleAlign: "center",
-          headerTintColor: '#fff',
+          headerTintColor: "#fff",
           headerStyle: {
             backgroundColor: "#7460F2",
           },
@@ -139,13 +150,13 @@ export default MainStackNavigator = () => {
         name="TemasScreen"
         component={TemasScreen}
         options={{
-          title: "Aritmetica",
+          title: "Algebra",
           headerTitleAlign: "center",
-          headerTintColor: '#fff',
+          headerTintColor: "#fff",
           headerStyle: {
             backgroundColor: "#7460F2",
-          }
-         }}
+          },
+        }}
       />
       <Stack.Screen
         name="TemaContenidoScreen"
@@ -153,60 +164,59 @@ export default MainStackNavigator = () => {
         options={{
           title: "Teoría de Conjunto",
           headerTitleAlign: "center",
-          headerTintColor: '#fff',
+          headerTintColor: "#fff",
           headerStyle: {
             backgroundColor: "#7460F2",
-          }
-         }}
+          },
+        }}
       />
       <Stack.Screen
         name="TeoriaStack"
         component={TeoriaStack}
-        options={{ 
-         title: "Teoría",
-         headerTitleAlign: "center",
-         headerTintColor: '#fff',
-         headerStyle: {
-           backgroundColor: "#7460F2",
-         } 
+        options={{
+          title: "Teoría",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
         }}
       />
       <Stack.Screen
         name="EjerciciosStack"
         component={EjerciciosStack}
-        options={{ 
-         title: "Ejercicios" 
+        options={{
+          title: "Ejercicios",
         }}
       />
       <Stack.Screen
         name="MaterialStack"
         component={MaterialStack}
-        options={{ 
-         title: "Material" 
+        options={{
+          title: "Material",
         }}
       />
       <Stack.Screen
         name="DesafiosStack"
         component={DesafiosStack}
-        options={{ 
-         title: "Desafios" 
+        options={{
+          title: "Desafios",
         }}
       />
       <Stack.Screen
         name="VideoStack"
         component={VideoStack}
-        options={{ 
-         title: "Videos" 
+        options={{
+          title: "Videos",
         }}
       />
       <Stack.Screen
         name="ExamenStack"
         component={ExamenStack}
-        options={{ 
-         title: "Examen" 
+        options={{
+          title: "Examen",
         }}
       />
-
     </Stack.Navigator>
   );
 };

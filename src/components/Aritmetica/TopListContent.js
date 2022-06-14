@@ -16,7 +16,6 @@ const TopListContent = ({ list }) => {
       <FlatList
         data={list}
         vertical
-        showsVerticalScrollIndicator={false}
         keyExtractor={(i) => i.id}
         renderItem={({ item, index }) => {
           return (
@@ -45,7 +44,7 @@ const TopListContent = ({ list }) => {
 
 const styles = StyleSheet.create({
   content: {
-    width: 350,
+    width: 380,
     height: 65,
   },
   imageBox: {
