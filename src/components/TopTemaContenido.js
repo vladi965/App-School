@@ -17,7 +17,7 @@ const TopTemaContenido = ({ list }) => {
         keyExtractor={(i) => i.id}
         renderItem={({ item, index }) => {
             return (
-                <TouchableOpacity onPress={() => {navigation.navigate('TeoriaStack')}}
+                <TouchableOpacity onPress={() => {navigation.navigate(`${item.url}`)}}
                     style={{ 
                         marginLeft: 15,
                         marginRight: index == list.length - 1 ? 30 : 30,
