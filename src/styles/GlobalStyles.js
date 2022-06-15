@@ -389,6 +389,54 @@ export const styles = StyleSheet.create({
     fontSize: 25,
     color: '#F43838',
     fontWeight: 'bold',
+  },
+  //Perfil
+  contentBoxPerfil:{
+    width: 365,
+    height: 240,
+    margin: 10,
+    backgroundColor: '#fff',
+    elevation: 7,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  contentBoxGeneral:{
+    width: 172,
+    height: 147,
+    margin: 10,
+    backgroundColor: '#fff',
+    elevation: 7,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.8,
+    shadowRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  principalContent:{
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  principalPerfil:{
+    marginTop: -60
+  },
+  temh1:{
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 7
+  },
+  temh3:{
+    fontSize: 16
+  },
+  temp1:{
+    fontSize: 17,
+    fontWeight: 'bold',
   }
  
 });
