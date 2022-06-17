@@ -13,7 +13,6 @@ import EstadisticaScreen from "../../screens/EstadisticaScreen";
 import PerfilScreen from "../../screens/PerfilScreen";
 import TemaContenidoScreen from "../../screens/TemaContenidoScreen";
 import VideosYoutubeList from "../../screens/VideosYoutubeList";
-/* import SplashScreenLogo from "../../screens/SplashScreenLogo"; */
 
 //Contenido Aritmetica
 import TeoriaStack from "../../screens/Algebra/LeyesdeTeoriaExponente/TeoriaStack";
@@ -23,6 +22,16 @@ import DesafiosStack from "../../screens/Algebra/LeyesdeTeoriaExponente/Desafios
 import VideoStack from "../../screens/Algebra/LeyesdeTeoriaExponente/VideoStack";
 import ExamenStack from "../../screens/Algebra/LeyesdeTeoriaExponente/ExamenStack";
 
+//Ejercicios Básicos
+import basico1 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico1";
+import basico2 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico2";
+import basico3 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico3";
+import basico4 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico4";
+import basico5 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico5";
+import basico6 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico6";
+
+
+//Botton Tab Navigator
 import BottomTabNavigator from "../BottomTabNavigator";
 
 const Stack = createStackNavigator();
@@ -97,11 +106,6 @@ const PerfilStackNavigator = () => {
 export default MainStackNavigator = () => {
   return (
     <Stack.Navigator>
-      {/*  <Stack.Screen
-        name="SplashScreenLogo"
-        component={SplashScreenLogo}
-        options={{ headerShown: false }}
-      />  */}
       <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}
@@ -235,6 +239,30 @@ export default MainStackNavigator = () => {
         component={ExamenStack}
         options={{
           title: "Examen",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="basico1"
+        component={basico1}
+        options={{
+          title: "Básico 1",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="basico2"
+        component={basico2}
+        options={{
+          title: "Básico 2",
           headerTitleAlign: "center",
           headerTintColor: "#fff",
           headerStyle: {
