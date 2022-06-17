@@ -7,7 +7,7 @@ import HomeScreen from "../../screens/HomeScreen";
 import ExercisesPopularsScreen from "../../screens/ExercisesPopularsScreen";
 import VideosPopularsScreen from "../../screens/VideosPopularsScreen";
 import CursosScreen from "../../screens/CursosScreen";
-import TemasScreen from "../../screens/Aritmetica/TemasScreen";
+import TemasScreen from "../../screens/Algebra/TemasScreen";
 import SelectionScreen from "../../screens/SelectionScreen";
 import EstadisticaScreen from "../../screens/EstadisticaScreen";
 import PerfilScreen from "../../screens/PerfilScreen";
@@ -16,12 +16,12 @@ import VideosYoutubeList from "../../screens/VideosYoutubeList";
 /* import SplashScreenLogo from "../../screens/SplashScreenLogo"; */
 
 //Contenido Aritmetica
-import TeoriaStack from "../../screens/Aritmetica/TeoriadeConjunto/TeoriaStack";
-import EjerciciosStack from "../../screens/Aritmetica/TeoriadeConjunto/EjerciciosStack";
-import MaterialStack from "../../screens/Aritmetica/TeoriadeConjunto/MaterialStack";
-import DesafiosStack from "../../screens/Aritmetica/TeoriadeConjunto/DesafiosStack";
-import VideoStack from "../../screens/Aritmetica/TeoriadeConjunto/VideoStack";
-import ExamenStack from "../../screens/Aritmetica/TeoriadeConjunto/ExamenStack";
+import TeoriaStack from "../../screens/Algebra/LeyesdeTeoriaExponente/TeoriaStack";
+import EjerciciosStack from "../../screens/Algebra/LeyesdeTeoriaExponente/EjerciciosStack";
+import MaterialStack from "../../screens/Algebra/LeyesdeTeoriaExponente/MaterialStack";
+import DesafiosStack from "../../screens/Algebra/LeyesdeTeoriaExponente/DesafiosStack";
+import VideoStack from "../../screens/Algebra/LeyesdeTeoriaExponente/VideoStack";
+import ExamenStack from "../../screens/Algebra/LeyesdeTeoriaExponente/ExamenStack";
 
 import BottomTabNavigator from "../BottomTabNavigator";
 
@@ -162,11 +162,11 @@ export default MainStackNavigator = () => {
         name="TemaContenidoScreen"
         component={TemaContenidoScreen}
         options={{
-          title: "Teoría de Conjunto",
-          headerTitleAlign: "center",
+          title: "Teoría de exponentes I",
           headerTintColor: "#fff",
+          headerTitleAlign: "center",
           headerStyle: {
-            backgroundColor: "#7460F2",
+            backgroundColor: "#7460F2"
           },
         }}
       />
@@ -187,6 +187,11 @@ export default MainStackNavigator = () => {
         component={EjerciciosStack}
         options={{
           title: "Ejercicios",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
         }}
       />
       <Stack.Screen
@@ -194,6 +199,11 @@ export default MainStackNavigator = () => {
         component={MaterialStack}
         options={{
           title: "Material",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
         }}
       />
       <Stack.Screen
@@ -201,6 +211,11 @@ export default MainStackNavigator = () => {
         component={DesafiosStack}
         options={{
           title: "Desafios",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
         }}
       />
       <Stack.Screen
@@ -208,6 +223,11 @@ export default MainStackNavigator = () => {
         component={VideoStack}
         options={{
           title: "Videos",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
         }}
       />
       <Stack.Screen
@@ -215,6 +235,11 @@ export default MainStackNavigator = () => {
         component={ExamenStack}
         options={{
           title: "Examen",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
         }}
       />
     </Stack.Navigator>

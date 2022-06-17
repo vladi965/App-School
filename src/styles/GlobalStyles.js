@@ -65,6 +65,13 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 17,
   },
+  pqContent:{
+    backgroundColor: '#fff'
+  },
+  rtContentBasic:{
+    marginTop: -30,
+    marginBottom: 10
+  },
   btnContentTwo: {
     height: 58,
     width: 150,
@@ -285,7 +292,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   img1:{
-    width: 320,
+    width: 250,
     height: 257,
   },
   

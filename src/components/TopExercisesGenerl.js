@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     titleBox:{
-      borderRadius: '50%',
+      borderRadius: 15,
       backgroundColor: '#fff',
       width: 35,
       height: 35,
