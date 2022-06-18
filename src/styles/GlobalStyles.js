@@ -471,7 +471,7 @@ export const styles = StyleSheet.create({
   h1Basic:{
     fontSize: 18,
     fontWeight: 'bold',
-    color: 'red'
+    color: 'red',
   },
   h2Basic:{
     fontSize: 18,
@@ -486,6 +486,14 @@ export const styles = StyleSheet.create({
   },
   boxImage:{
     marginTop: 20,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  //Button Result
+  contentResult:{
+    marginTop: 30,
+  },
+  opContent:{
     alignItems: 'center',
     justifyContent: 'center'
   }
