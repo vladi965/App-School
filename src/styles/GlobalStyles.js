@@ -134,6 +134,7 @@ export const styles = StyleSheet.create({
     marginTop: 70,
   },
   passwordContainer: {
+    display: 'flex',
     flexDirection: "row",
     width: "100%",
   },
@@ -444,5 +445,48 @@ export const styles = StyleSheet.create({
   temp1:{
     fontSize: 17,
     fontWeight: 'bold',
+  },
+  //Basico I
+  contentBasic1:{
+    backgroundColor: '#fff',
+    height: '100%'
+  },
+  imgBasic:{
+    width: 400,
+  },
+  imgBasic1:{
+    width: 250,
+  },
+  imgBasic4:{
+    width: 250,
+  },
+  imgBasic5:{
+    width: 280,
+    height: 120
+  },
+  contentBox:{
+    marginHorizontal: 10,
+    marginTop: 20,
+  },
+  h1Basic:{
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'red'
+  },
+  h2Basic:{
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+    marginTop: 10,
+  },
+  h3Basic:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'red',
+  },
+  boxImage:{
+    marginTop: 20,
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 });

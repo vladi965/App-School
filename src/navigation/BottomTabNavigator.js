@@ -4,7 +4,6 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 import { HomeStackNavigator, CursoStackNavigator, EstadistStackNavigator, PerfilStackNavigator } from './stack/StackNavigator';
 
-
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {

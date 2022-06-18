@@ -1,10 +1,18 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { View, Text, Image } from 'react-native'
+import { styles } from "../../../../styles/GlobalStyles";
+const img5 = require("../../../../assets/algebra/ejercicios/basico/img5.png");
 
 const basico5 = () => {
   return (
-    <View>
-      <Text>basico5</Text>
+    <View style={styles.contentBasic1}>
+      <View style={styles.contentBox}>
+        <Text style={styles.h1Basic}>5. Simplifica</Text>
+        <View style={styles.boxImage}>
+          <Image style={styles.imgBasic5} source={img5} />
+        </View>
+        <Text style={styles.h1Basic}>Solución:</Text>
+      </View>
     </View>
   )
 }

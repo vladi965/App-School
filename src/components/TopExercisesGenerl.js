@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, Image} from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
 const CARD_WIDTH = 185;
 const CARD_HEIGHT = 160;
 const CARD_HEIGHT_SPACING = 10;
 
 const TopExercisesGenerl = ({ list }) => {
+  const navigation = useNavigation();
   return (
     <View>
       <FlatList 
@@ -17,7 +19,7 @@ const TopExercisesGenerl = ({ list }) => {
         keyExtractor={(i) => i.id}
         renderItem={({ item, index }) => {
             return (
-                <TouchableOpacity
+                <TouchableOpacity onPress={() => {navigation.navigate(`${item.url}`)}}
                 style={{ 
                     marginLeft: 15,
                     marginRight: 5,

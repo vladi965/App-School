@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import {View, FlatList, StyleSheet, Text, TouchableOpacity } from "react-native";
+import {
+  View,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ButtonPrincipal from "../components/ButtonPrincipal";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
-
+// DATA
 const DATA = [
   {
     id: "1",
@@ -28,7 +34,8 @@ const DATA = [
   },
 ];
 
-const Item = ({ item, onPress, backgroundColor, textColor}) => (
+
+const Item = ({ item, onPress, backgroundColor, textColor }) => (
   <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
     <Text style={[styles.title, textColor]}>{item.title}</Text>
   </TouchableOpacity>
@@ -40,8 +47,8 @@ const GridList = () => {
 
   const renderItem = ({ item }) => {
     const backgroundColor = item.id === selectedId ? "#7460F2" : "#ffffff";
-    const color = item.id === selectedId ? 'white' : 'black';
-    
+    const color = item.id === selectedId ? "white" : "black";
+
     return (
       <Item
         item={item}
@@ -64,35 +71,35 @@ const GridList = () => {
         />
       </View>
       <View style={styles.container}>
-        <ButtonPrincipal title="Ingresar" onPress={() => navigation.navigate('TabNavigator')}/>
+        <ButtonPrincipal
+          title="Ingresar"
+          onPress={() => navigation.navigate("TabNavigator")}
+        />
       </View>
     </SafeAreaView>
   );
 };
 
-
 const styles = StyleSheet.create({
-  container:{
-    justifyContent: 'center',
-    alignItems: 'center',
+  container: {
+    justifyContent: "center",
+    alignItems: "center",
   },
   item: {
     height: 80,
     width: 150,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#7460F2',
+    borderColor: "#7460F2",
     marginVertical: 8,
     marginHorizontal: 15,
   },
   title: {
     fontSize: 18,
-    color: '#000'
+    color: "#000",
   },
-  
 });
 
 export default GridList;
-

@@ -5,7 +5,7 @@ import { styles } from "../../../styles/GlobalStyles";
 const MaterialScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>MaterialScreen</Text>
+      <Text>Descarga tus recursos de estudio para practicar más!</Text>
     </View>
   )
 }

@@ -7,8 +7,9 @@ import ButtonGoogle from "../components/ButtonGoogle";
 import ButtonFacebook from "../components/ButtonFacebook";
 // -- Styles -- //
 import { styles } from "../styles/GlobalStyles";
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'; 
 import { useNavigation } from '@react-navigation/native';
+//Icono
 import { Ionicons } from '@expo/vector-icons';
 
 import { authentication } from "../../services/firebase-config";
@@ -25,7 +26,6 @@ export default function LoginScreen() {
   const [password, setPassword] = useState('');
   const [visible, setVisibility] = React.useState({ name: "eye-off" });
 
-
   const SignInUser = () => {
     signInWithEmailAndPassword(authentication, email, password)
      .then((userCredential) => {
@@ -40,7 +40,7 @@ export default function LoginScreen() {
      })
   }
 
-  //Toggles the eye icon to show the password
+  //Icono de eyes para activar
   const ToggleVisibility = () => {
     if(visible.name === "eye"){
       setVisibility({ name: "eye-off" });
@@ -49,7 +49,7 @@ export default function LoginScreen() {
      }
   };
 
-  //Handles password visibility when the eye icon is pressed
+  //Visibility Icon eye password
   const secureTextEntry = () => {
     if(visible.name === "eye"){
       return false;
@@ -58,15 +58,10 @@ export default function LoginScreen() {
     }
   };
 
-  
-  //Google SignIn
-
-  //Facebook SignIn
-
 
   return (
     <SafeAreaView style={styles.container}>
-      <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
+      <KeyboardAwareScrollView showsVerticalScrollIndicator={false}> 
       <View>
         <View style={styles.content}>
           <Image style={styles.logo} source={logo} />
@@ -116,7 +111,7 @@ export default function LoginScreen() {
           </View>
         </View>
       </View>
-    </KeyboardAwareScrollView>
+   </KeyboardAwareScrollView> 
     </SafeAreaView>
   );
 }

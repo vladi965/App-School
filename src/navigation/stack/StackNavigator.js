@@ -270,6 +270,54 @@ export default MainStackNavigator = () => {
           },
         }}
       />
+      <Stack.Screen
+        name="basico3"
+        component={basico3}
+        options={{
+          title: "Básico 3",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="basico4"
+        component={basico4}
+        options={{
+          title: "Básico 4",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="basico5"
+        component={basico5}
+        options={{
+          title: "Básico 5",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="basico6"
+        component={basico6}
+        options={{
+          title: "Básico 6",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 };
