@@ -13,6 +13,7 @@ import EstadisticaScreen from "../../screens/EstadisticaScreen";
 import PerfilScreen from "../../screens/PerfilScreen";
 import TemaContenidoScreen from "../../screens/TemaContenidoScreen";
 import VideosYoutubeList from "../../screens/VideosYoutubeList";
+import PrevioExamenScreen from "../../screens/PrevioExamenScreen";
 
 //Contenido Aritmetica
 import TeoriaStack from "../../screens/Algebra/LeyesdeTeoriaExponente/TeoriaStack";
@@ -234,6 +235,20 @@ export default MainStackNavigator = () => {
           },
         }}
       />
+
+      <Stack.Screen
+        name="PrevioExamenScreen"
+        component={PrevioExamenScreen}
+        options={{
+          title: "Previo Examen",
+          headerTitleAlign: "center",
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: "#7460F2",
+          },
+        }}
+      />
+
       <Stack.Screen
         name="ExamenStack"
         component={ExamenStack}

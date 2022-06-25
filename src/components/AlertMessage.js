@@ -7,10 +7,10 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 
 const AlertMessage = (props) => {
   const [visible, setVisible] = React.useState(false);
-
   const toggleAlert = React.useCallback(() => {
       setVisible(!visible);
   }, [visible]);
+
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.contentView} onPress={toggleAlert}>
@@ -43,8 +43,8 @@ const AlertMessage = (props) => {
           !props.answer ? 'Respuesta Incorrecta' : 'Respuesta Correcta' 
          }
         </Text>
-        <TouchableOpacity style={[styles.btn,
-
+        <TouchableOpacity style={[
+          styles.btn,
           !props.answer ? styles.btnFalse : styles.btnCorrect
 
         ]} onPress={toggleAlert}>

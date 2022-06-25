@@ -33,6 +33,6 @@ export const TOP_TEMA_CONTENIDO = [
         id:6,
         image: require('../assets/Tcontenido/img6.png'),
         title: 'Examen',
-        url: 'ExamenStack'
+        url: 'PrevioExamenScreen'
     },
 ]
