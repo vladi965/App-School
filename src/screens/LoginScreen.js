@@ -51,8 +51,8 @@ export default function LoginScreen() {
 
 
 
-  /* const SignInUser = () => {
-    signInWithEmailAndPassword(authentication, email, password)
+  const SignInUser = () => {
+    signInWithEmailAndPassword(authentication,email, password)
      .then((userCredential) => {
         console.log("Welcome a AppSchool!")
         Alert.alert('Welcome a AppSchool!')
@@ -63,7 +63,7 @@ export default function LoginScreen() {
      .catch((error) => {
         console.log(error);
      })
-  } */
+  } 
 
   //Icono de eyes para activar
   const ToggleVisibility = () => {

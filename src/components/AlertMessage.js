@@ -3,12 +3,14 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { FancyAlert } from 'react-native-expo-fancy-alerts';
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-const AlertMessage = () => {
+
+
+const AlertMessage = (props) => {
   const [visible, setVisible] = React.useState(false);
+
   const toggleAlert = React.useCallback(() => {
       setVisible(!visible);
   }, [visible]);
-
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.contentView} onPress={toggleAlert}>
@@ -22,16 +24,30 @@ const AlertMessage = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: 'red',
+          backgroundColor: !props.answer ? 'red' : 'green',
           borderRadius: 50,
           width: '100%',
         }}>
-          <Icon name="times" color="white" size={30} />
+          <Icon 
+            name={
+            !props.answer 
+              ? "times" 
+              : "check" }
+            color="white"
+            size={30} />
           </View>}
           style={{ backgroundColor: 'white'}}
       >
-        <Text style={{ marginTop: -16, marginBottom: 15, fontSize: 20 }}>Respuesta Incorrecta</Text>
-        <TouchableOpacity style={styles.btn}>
+        <Text style={{ marginTop: -16, marginBottom: 15, fontSize: 20 }}>
+         {
+          !props.answer ? 'Respuesta Incorrecta' : 'Respuesta Correcta' 
+         }
+        </Text>
+        <TouchableOpacity style={[styles.btn,
+
+          !props.answer ? styles.btnFalse : styles.btnCorrect
+
+        ]} onPress={toggleAlert}>
           <Text style={styles.btnText}>Ok</Text>
         </TouchableOpacity>
       </FancyAlert>
@@ -66,11 +82,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 8,
     alignSelf: 'stretch',
-    backgroundColor: 'red',
     marginTop: 16,
     minWidth: '40%',
     paddingHorizontal: 16,
     marginBottom: 10
+  },
+  btnCorrect:{
+    backgroundColor: 'green',
+  },
+  btnFalse:{
+    backgroundColor: 'red',
   },
   btnText:{
     color: 'white',

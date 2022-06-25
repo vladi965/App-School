@@ -13,26 +13,32 @@ const DATA = [
   {
     id: 1,
     title: "25",
+    correct: false,
   },
   {
     id: 2,
     title: "12",
+    correct: false,
   },
   {
     id: 3,
     title: "3",
+    correct: true,
   },
   {
     id: 4,
     title: "8",
+    correct: false,
   },
   {
     id: 5,
     title: "6",
+    correct: false,
   },
   {
     id: 6,
     title: "12",
+    correct: false,
   },
 ];
 
@@ -42,9 +48,15 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => (
   </TouchableOpacity>
 );
 
-const ResultButton = () => {
+const ResultButton = (props) => {
   const [selectedId, setSelectedId] = useState(null);
+
   const navigation = useNavigation();
+  
+  const onTrigger = (item, props) => {
+    setSelectedId(item.id)
+    props.answerCallback(item.correct)
+  }
 
   const renderItem = ({ item }) => {
     const backgroundColor = item.id === selectedId ? "#7460F2" : "#ffffff";
@@ -53,7 +65,7 @@ const ResultButton = () => {
     return (
       <Item
         item={item}
-        onPress={() => setSelectedId(item.id)}
+        onPress={() => {onTrigger(item, props)} }
         backgroundColor={{ backgroundColor }}
         textColor={{ color }}
       />

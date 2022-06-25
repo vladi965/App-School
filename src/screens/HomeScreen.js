@@ -21,7 +21,7 @@ export default function HomeScreen() {
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.contentHome}>
             <View style={styles.contentTitle}>
-              <Text style={styles.textHome}>Hola, {`${auth.firstName}`}</Text>
+              <Text style={styles.textHome}>Hola, estudiante </Text>
               <SimpleEmoji style={styles.emoji} shortName={"hand"} />
             </View>
             <Search />
