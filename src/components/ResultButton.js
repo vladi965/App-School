@@ -20,15 +20,15 @@ const DATA = [
   },
   {
     id: 3,
-    title: "15",
+    title: "3",
   },
   {
     id: 4,
-    title: "40",
+    title: "8",
   },
   {
     id: 5,
-    title: "35",
+    title: "6",
   },
   {
     id: 6,

@@ -2,7 +2,6 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { styles } from "../../../styles/GlobalStyles";
 
-
 const img1 = require('../../../assets/algebra/img1.png');
 
 const TeoriaScreen = () => {
@@ -17,15 +16,13 @@ const TeoriaScreen = () => {
         <View style={styles.contentImage}>
         <Image style={styles.img1} source={img1} />
         </View>
-        <Text style={styles.titleText}>a: base</Text>
-        <Text style={styles.titleText}>a: base</Text>
+        <Text style={styles.titleText}>b: base</Text>
+        <Text style={styles.titleText}>c: base</Text>
         <Text style={styles.titleText}>a: base</Text>
         <Text style={styles.textTwo}>1. Por Extensión: Cuando sus elementos están indicados explícitamente, es decir,
         se mencionan en forma completa los elementos del conjunto.
         </Text>
-          
       </View>
-      
     </View>
   )
 }

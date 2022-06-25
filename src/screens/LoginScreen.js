@@ -11,14 +11,21 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { useNavigation } from '@react-navigation/native';
 //Icono
 import { Ionicons } from '@expo/vector-icons';
-
 import { authentication } from "../../services/firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
+
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { user, userDetails } from "../../src/utils/UserDB";
+import useAuth from "../../src/hooks/useAuth";
 
 //Logo
 const logo = require("../assets/general/atomo.png");
 
 export default function LoginScreen() {
+  const [ error, setError ] = useState("");
+  const { login } = useAuth();
+
   const navigation = useNavigation();
 
   //Text input states
@@ -26,7 +33,25 @@ export default function LoginScreen() {
   const [password, setPassword] = useState('');
   const [visible, setVisibility] = React.useState({ name: "eye-off" });
 
-  const SignInUser = () => {
+  const formik = useFormik({ 
+    initialValues: initialValues(),
+    validationSchema: Yup.object(validationSchema()),
+    validateOnChange: false,
+    onSubmit: (formValue) => {
+      setError('')
+      const { username, password } = formValue;
+
+      if(username !== user.username || password !== user.password){
+        setError('El usuario o la contraseña no son correcto');
+      } else {
+        login(userDetails)
+      }
+    },
+  });
+
+
+
+  /* const SignInUser = () => {
     signInWithEmailAndPassword(authentication, email, password)
      .then((userCredential) => {
         console.log("Welcome a AppSchool!")
@@ -38,7 +63,7 @@ export default function LoginScreen() {
      .catch((error) => {
         console.log(error);
      })
-  }
+  } */
 
   //Icono de eyes para activar
   const ToggleVisibility = () => {
@@ -69,10 +94,12 @@ export default function LoginScreen() {
           <View style={styles.contentInput}>
             <TextInput
               defaultValue={email}
-              onChangeText={text => setEmail(text)}
+              onChangeText={(text) => formik.setFieldValue("username", text)}
               style={styles.textInput}
+              autocapitalize="none"
               textContentType= "emailAddress"
-              placeholder="Correo Electronico"
+              placeholder="Nombre de usuario"
+              value={formik.values.username}
               placeholderTextColor="#7460F2"
               returnKeyType="next"
             />
@@ -80,10 +107,12 @@ export default function LoginScreen() {
             <TextInput
               defaultValue={password}
               style={styles.textInput}
-              onChangeText={text => setPassword(text)}
+              autocapitalize="none"
+              onChangeText={(text) => formik.setFieldValue("password", text)}
               placeholder="Contraseña"
               placeholderTextColor="#7460F2"
               returnKeyType="go"
+              value={formik.values.password}
               secureTextEntry={secureTextEntry()}
               textContentType="password"
               keyboardType="default"
@@ -99,6 +128,9 @@ export default function LoginScreen() {
             </View>
           </View>
           <ButtonPrincipal title="Ingresar" onPress={() => navigation.navigate('SelectionScreen')} />
+          <Text style={styles.error}>{formik.errors.username}</Text>
+          <Text style={styles.error}>{formik.errors.password}</Text>
+          <Text style={styles.error}>{error}</Text>
           <View style={styles.contentPrincipal}>
             <ButtonGoogle title="Google"/>
             <ButtonFacebook title="Facebook"/>
@@ -114,4 +146,18 @@ export default function LoginScreen() {
    </KeyboardAwareScrollView> 
     </SafeAreaView>
   );
+}
+
+function initialValues(){
+  return{
+    username: "",
+    password: "",
+  };
+}
+
+function validationSchema(){
+  return {
+    username: Yup.string().required("El usuario es obligatorio"),
+    password: Yup.string().required("La contraseña es obligatorio"),
+  }
 }

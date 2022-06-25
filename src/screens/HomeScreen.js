@@ -11,15 +11,17 @@ import { TOP_EXERCISES } from "../Data/exercises";
 import Carousel from "../components/Carousel";
 import { CAROUSEL } from "../Data/carousel_Home";
 import SimpleEmoji from "simple-react-native-emoji";
+import useAuth from "../hooks/useAuth";
 
 export default function HomeScreen() {
+  const {auth, logout} = useAuth();
   return (
     <SafeAreaView>
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.contentHome}>
             <View style={styles.contentTitle}>
-              <Text style={styles.textHome}>Hola, Estudiante!</Text>
+              <Text style={styles.textHome}>Hola, {`${auth.firstName}`}</Text>
               <SimpleEmoji style={styles.emoji} shortName={"hand"} />
             </View>
             <Search />

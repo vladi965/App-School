@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
     fontSize: 15,
   },
   contentPrincipal: {
-    marginTop: 30,
+    marginTop: -5,
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -357,7 +357,7 @@ export const styles = StyleSheet.create({
     marginRight: 3
   },
   opContent:{
-    marginBottom: 80
+    marginBottom: 120
   },
   h5:{
     marginTop: 2,
@@ -496,5 +496,13 @@ export const styles = StyleSheet.create({
   opContent:{
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  opContent1:{
+    marginTop: 30,
+  },
+  error:{
+    textAlign: 'center',
+    color: '#f00',
+    marginTop: 10,
   }
 });
