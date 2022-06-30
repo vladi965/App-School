@@ -10,9 +10,7 @@ const img1 = require("../../../../assets/algebra/ejercicios/basico/img1.png");
 
 const basico1 = () => {
   const navigation = useNavigation();
-
   const [answer, setAnswer] = useState('');
-
   const handleCallback = (newAnswer) => {
     setAnswer(newAnswer);
     console.log(newAnswer)
