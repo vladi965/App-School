@@ -31,7 +31,6 @@ import basico4 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico4
 import basico5 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico5";
 import basico6 from "../../screens/Algebra/LeyesdeTeoriaExponente/basico/basico6";
 
-
 //Botton Tab Navigator
 import BottomTabNavigator from "../BottomTabNavigator";
 
@@ -90,7 +89,9 @@ const EstadistStackNavigator = () => {
 const PerfilStackNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="PerfilScreen" component={PerfilScreen} 
+      <Stack.Screen
+        name="PerfilScreen"
+        component={PerfilScreen}
         options={{
           title: "Perfil",
           headerTintColor: "#fff",
@@ -104,7 +105,23 @@ const PerfilStackNavigator = () => {
   );
 };
 
-export default MainStackNavigator = () => {
+export const LogoutNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="RegisterScreen"
+        component={RegisterScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
+export const MainStackNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -171,7 +188,7 @@ export default MainStackNavigator = () => {
           headerTintColor: "#fff",
           headerTitleAlign: "center",
           headerStyle: {
-            backgroundColor: "#7460F2"
+            backgroundColor: "#7460F2",
           },
         }}
       />

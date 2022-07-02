@@ -11,12 +11,12 @@ export const styles = StyleSheet.create({
   textH3: {
     fontSize: 18,
     fontWeight: "bold",
-    textAlign: 'center'
+    textAlign: "center",
   },
   textH2: {
     marginTop: 15,
     fontSize: 20,
-    color: '#000',
+    color: "#000",
     marginHorizontal: 15,
     marginBottom: 15,
     fontWeight: "bold",
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
   content: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 85
+    marginTop: 85,
   },
   logo: {
     width: 130,
@@ -65,12 +65,12 @@ export const styles = StyleSheet.create({
     color: "white",
     fontSize: 17,
   },
-  pqContent:{
-    backgroundColor: '#fff'
+  pqContent: {
+    backgroundColor: "#fff",
   },
-  rtContentBasic:{
+  rtContentBasic: {
     marginTop: -30,
-    marginBottom: 10
+    marginBottom: 10,
   },
   btnContentTwo: {
     height: 58,
@@ -112,20 +112,26 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     color: myColors.btnviolet,
   },
-  contentTop:{
-    marginTop: -40
+  contentTop: {
+    marginTop: -40,
   },
-  emoji:{
+  emoji: {
     height: 40,
     width: 40,
     fontSize: 25,
-    marginLeft: 10
+    marginLeft: 10,
   },
-  contentTitle:{
+  emojix: {
+    height: 40,
+    width: 40,
+    fontSize: 25,
+    marginLeft: 10,
+  },
+  contentTitle: {
     display: "flex",
     flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center"
+    alignItems: "space-between",
+    justifyContent: "center",
   },
   //Registrar
   textRegister: {
@@ -134,14 +140,14 @@ export const styles = StyleSheet.create({
     marginTop: 70,
   },
   passwordContainer: {
-    display: 'flex',
+    display: "flex",
     flexDirection: "row",
     width: "100%",
   },
-  eyeContainer:{
+  eyeContainer: {
     position: "absolute",
     right: 10,
-    top: 40
+    top: 40,
   },
   //Seleccione tu Grado
   btnSelection: {
@@ -178,7 +184,7 @@ export const styles = StyleSheet.create({
   textHome: {
     fontSize: 30,
     fontWeight: "bold",
-    marginLeft: -70
+    marginLeft: -70,
   },
   contentSearch: {
     marginTop: 5,
@@ -223,286 +229,285 @@ export const styles = StyleSheet.create({
     marginBottom: 15,
   },
   ViewContent: {
-    height: '100%',
+    height: "100%",
     backgroundColor: "#fff",
   },
   //Previo del Examen
-  imgContent:{
+  imgContent: {
     marginTop: 55,
-    position: 'relative',
-    alignSelf: 'center',
-    marginBottom: 25
+    position: "relative",
+    alignSelf: "center",
+    marginBottom: 25,
   },
-  ViewExamPrev:{
+  ViewExamPrev: {
     flexDirection: "row",
     marginTop: 10,
-    marginHorizontal: 30
+    marginHorizontal: 30,
   },
-  imgEx:{
+  imgEx: {
     width: 20,
     height: 20,
-    resizeMode: 'contain',
-    marginRight: 7
+    resizeMode: "contain",
+    marginRight: 7,
   },
-  extitle:{
+  extitle: {
     fontSize: 14,
-    color: '#646464'
+    color: "#646464",
   },
-  lineStyle:{
+  lineStyle: {
     borderWidth: 0.5,
-    borderColor: '#727272',
+    borderColor: "#727272",
     margin: 15,
     marginHorizontal: 18,
-    width: '90%',
+    width: "90%",
   },
-  ViewText:{
-    flexDirection: 'row',
+  ViewText: {
+    flexDirection: "row",
     marginHorizontal: 30,
-    marginTop: 7 
+    marginTop: 7,
   },
-  TextH4:{
+  TextH4: {
     fontSize: 16,
-    color: '#000',
-    marginLeft: 10
+    color: "#000",
+    marginLeft: 10,
   },
-  contentPrevi:{
+  contentPrevi: {
     marginTop: 10,
-    marginBottom: 15
+    marginBottom: 15,
   },
-  CircleText:{
-    color: '#000',
+  CircleText: {
+    color: "#000",
     fontWeight: "bold",
     fontSize: 16,
   },
   //Curso Aritmetica
   // Teoria
-  viewSecund:{
-    marginHorizontal: 12
+  viewSecund: {
+    marginHorizontal: 12,
   },
-  titleText:{
-    textAlign: 'justify',
-    lineHeight: 20
-
+  titleText: {
+    textAlign: "justify",
+    lineHeight: 20,
   },
-  contentImage:{
+  contentImage: {
     marginTop: 10,
     marginBottom: 15,
-    textAlign: 'center',
-    alignItems: 'center',
-    alignContent: 'center',
-    justifyContent: 'center',
+    textAlign: "center",
+    alignItems: "center",
+    alignContent: "center",
+    justifyContent: "center",
   },
-  img1:{
+  img1: {
     width: 250,
     height: 257,
   },
-  
-  textTwo:{
+
+  textTwo: {
     marginTop: 20,
   },
-  pt1:{
+  pt1: {
     fontSize: 18,
     fontWeight: "bold",
-    color: '#7460F2'
+    color: "#7460F2",
   },
-  pt2:{
+  pt2: {
     fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'left',
+    fontWeight: "bold",
+    textAlign: "left",
   },
   //Estadistica
-  contentBoxTwo:{
+  contentBoxTwo: {
     width: 165,
     height: 160,
     margin: 10,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     elevation: 7,
     borderRadius: 10,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.8,
     shadowRadius: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
-  contentBoxDirection:{
-    alignItems: 'center',
-    justifyContent: 'center',
-    display: 'flex',
-    flexDirection: 'row',
-    marginBottom: 25
+  contentBoxDirection: {
+    alignItems: "center",
+    justifyContent: "center",
+    display: "flex",
+    flexDirection: "row",
+    marginBottom: 25,
   },
-  textp1:{
-    alignItems: 'center',
-    justifyContent: 'center',
+  textp1: {
+    alignItems: "center",
+    justifyContent: "center",
   },
-  ContentPrimaryCircle:{
-    display: 'flex',
-    flexDirection: 'row',
+  ContentPrimaryCircle: {
+    display: "flex",
+    flexDirection: "row",
   },
-  circleContent:{
-    display: 'flex',
-    flexDirection: 'row',
+  circleContent: {
+    display: "flex",
+    flexDirection: "row",
   },
-  one:{
+  one: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
-  r1:{
+  r1: {
     fontSize: 10,
-    fontWeight: 'bold',
-    marginRight: 2
+    fontWeight: "bold",
+    marginRight: 2,
   },
-  imgcircle:{
-    marginRight: 3
+  imgcircle: {
+    marginRight: 3,
   },
-  opContent:{
-    marginBottom: 120
+  opContent: {
+    marginBottom: 120,
   },
-  h5:{
+  h5: {
     marginTop: 2,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
-  imagenStadistc:{
+  imagenStadistc: {
     height: 70,
     width: 70,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#AFE5DC',
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#AFE5DC",
     borderRadius: 50,
   },
-  imagenStadistc2:{
+  imagenStadistc2: {
     height: 70,
     width: 70,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#FAE7A8',
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#FAE7A8",
     borderRadius: 50,
   },
-  imagen:{
+  imagen: {
     height: 40,
-    width: 40
+    width: 40,
   },
-  img3:{
+  img3: {
     height: 180,
-    width: 210
+    width: 210,
   },
-  one1:{
+  one1: {
     fontSize: 25,
-    color: '#5184DD',
-    fontWeight: 'bold',
+    color: "#5184DD",
+    fontWeight: "bold",
   },
-  one2:{
+  one2: {
     fontSize: 25,
-    color: '#F43838',
-    fontWeight: 'bold',
+    color: "#F43838",
+    fontWeight: "bold",
   },
   //Perfil
-  contentBoxPerfil:{
+  contentBoxPerfil: {
     width: 365,
     height: 240,
     margin: 10,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     elevation: 7,
     borderRadius: 10,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.8,
     shadowRadius: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
-  contentBoxGeneral:{
+  contentBoxGeneral: {
     width: 172,
     height: 147,
     margin: 10,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     elevation: 7,
     borderRadius: 10,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.8,
     shadowRadius: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
-  principalContent:{
-    display: 'flex',
-    flexDirection: 'row',
+  principalContent: {
+    display: "flex",
+    flexDirection: "row",
   },
-  principalPerfil:{
-    marginTop: -60
+  principalPerfil: {
+    marginTop: -60,
   },
-  temh1:{
+  temh1: {
     fontSize: 20,
-    fontWeight: 'bold',
-    marginTop: 7
+    fontWeight: "bold",
+    marginTop: 7,
   },
-  temh3:{
-    fontSize: 16
+  temh3: {
+    fontSize: 16,
   },
-  temp1:{
+  temp1: {
     fontSize: 17,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   //Basico I
-  contentBasic1:{
-    backgroundColor: '#fff',
-    height: '100%'
+  contentBasic1: {
+    backgroundColor: "#fff",
+    height: "100%",
   },
-  imgBasic:{
+  imgBasic: {
     width: 400,
   },
-  imgBasic1:{
+  imgBasic1: {
     width: 250,
   },
-  imgBasic4:{
+  imgBasic4: {
     width: 250,
   },
-  imgBasic5:{
+  imgBasic5: {
     width: 280,
-    height: 120
+    height: 120,
   },
-  contentBox:{
+  contentBox: {
     marginHorizontal: 10,
     marginTop: 20,
   },
-  h1Basic:{
+  h1Basic: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: 'red',
+    fontWeight: "bold",
+    color: "red",
   },
-  h2Basic:{
+  h2Basic: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#000',
+    fontWeight: "bold",
+    color: "#000",
     marginTop: 10,
   },
-  h3Basic:{
+  h3Basic: {
     fontSize: 16,
-    fontWeight: 'bold',
-    color: 'red',
+    fontWeight: "bold",
+    color: "red",
   },
-  boxImage:{
+  boxImage: {
     marginTop: 20,
-    alignItems: 'center',
-    justifyContent: 'center'
+    alignItems: "center",
+    justifyContent: "center",
   },
   //Button Result
-  contentResult:{
+  contentResult: {
     marginTop: 30,
   },
-  opContent:{
-    alignItems: 'center',
-    justifyContent: 'center'
+  opContent: {
+    alignItems: "center",
+    justifyContent: "center",
   },
-  opContent1:{
+  opContent1: {
     marginTop: 30,
   },
-  error:{
-    textAlign: 'center',
-    color: '#f00',
+  error: {
+    textAlign: "center",
+    color: "#f00",
     marginTop: 10,
-  }
+  },
 });

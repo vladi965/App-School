@@ -1,7 +1,7 @@
 import React from "react";
 
 import  { NavigationContainer } from '@react-navigation/native';
-import MainStackNavigator from "./src/navigation/stack/StackNavigator";
+import AuthNavigation from "./src/navigation/stack/AuthNavigation";
 
 
 import {LogBox} from "react-native";
@@ -14,7 +14,7 @@ LogBox.ignoreLogs([
 export default function App() {
   return (
     <NavigationContainer>
-       <MainStackNavigator /> 
+       <AuthNavigation /> 
     </NavigationContainer> 
   );
 }
