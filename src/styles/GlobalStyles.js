@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { fonts } from "react-native-elements/dist/config";
 import { myColors } from "./Color";
 
 export const styles = StyleSheet.create({
@@ -284,6 +285,7 @@ export const styles = StyleSheet.create({
   // Teoria
   viewSecund: {
     marginHorizontal: 12,
+    marginTop: 15,
   },
   titleText: {
     textAlign: "justify",
@@ -309,11 +311,15 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     color: "#7460F2",
+    textAlign: "center",
+    marginTop: 20,
   },
   pt2: {
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "bold",
     textAlign: "left",
+    marginBottom: 10,
+    marginTop: 10,
   },
   //Estadistica
   contentBoxTwo: {
@@ -509,5 +515,62 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     color: "#f00",
     marginTop: 10,
+  },
+  //Previo Examen
+  contentPrevio: {
+    backgroundColor: "#fff",
+    height: "100%",
+  },
+  //Examen
+  contentCount: {
+    marginTop: 30,
+    flexDirection: "row",
+    alignItems: "center",
+    alignContent: "center",
+    justifyContent: "center",
+  },
+  containerTwo: {
+    backgroundColor: "#fff",
+    height: "100%",
+  },
+  tomp1: {
+    marginTop: 40,
+    marginHorizontal: 10,
+  },
+  checkboxContainer: {
+    flexDirection: "row",
+    marginTop: 10,
+  },
+  checkbox: {
+    alignSelf: "center",
+  },
+  label: {
+    margin: 8,
+  },
+  //Material
+  textM1: {
+    color: "#7460F2",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+  viewContent: {
+    marginTop: 50,
+  },
+  //Button Dowloand
+  contentButtonTwo: {
+    flexDirection: "row",
+  },
+  btnContentDowloand: {
+    height: 40,
+    width: 120,
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 7,
+    borderColor: "#7460F2",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  btnTextOne: {
+    color: "#fff",
   },
 });

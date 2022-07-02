@@ -16,11 +16,11 @@ export default function DescriptionPrevExam() {
       </View>
       <View style={styles.ViewText}>
         <Icon name="asterisk" color="#7460F2" size={10} style={{ position: "relative", alignSelf: "center" }} />
-        <Text style={styles.TextH4}>Tienes 30 minutos para presentarlo.</Text>
+        <Text style={styles.TextH4}>Tienes 20 minutos para presentarlo.</Text>
       </View>
       <View style={styles.ViewText}>
         <Icon name="asterisk" color="#7460F2" size={10} style={{ position: "relative", alignSelf: "center" }} />
-        <Text style={styles.TextH4}>Necesitas 18 respuestas correctas para aprobarlo</Text>
+        <Text style={styles.TextH4}>Necesitas 18 respuestas correctas para aprobarlo</Text> 
       </View>
     </View>
   );
