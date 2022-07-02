@@ -278,7 +278,8 @@ export const styles = StyleSheet.create({
   //Curso Aritmetica
   // Teoria
   viewSecund:{
-    marginHorizontal: 12
+    marginHorizontal: 12,
+    marginTop: 15, 
   },
   titleText:{
     textAlign: 'justify',
@@ -304,12 +305,16 @@ export const styles = StyleSheet.create({
   pt1:{
     fontSize: 18,
     fontWeight: "bold",
-    color: '#7460F2'
+    color: '#7460F2',
+    textAlign: 'center',
+    marginTop: 20
   },
   pt2:{
-    fontSize: 16,
+    fontSize: 18,                                                               
     fontWeight: 'bold',
     textAlign: 'left',
+    marginBottom: 10,
+    marginTop: 10
   },
   //Estadistica
   contentBoxTwo:{
@@ -529,7 +534,7 @@ export const styles = StyleSheet.create({
   },
   checkboxContainer:{
     flexDirection: 'row',
-    marginTop: 40,
+    marginTop: 10,
   },
   checkbox:{
     alignSelf: 'center',
