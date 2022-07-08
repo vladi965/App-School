@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { styles } from "../../../styles/GlobalStyles";
- 
+import ButtonDowloand from '../../../components/ButtonDowloand';
 // Imagen 
 const img1 = require('../../../assets/material/m1.png');
 const img2 = require('../../../assets/material/m2.png');
@@ -16,8 +16,35 @@ const MaterialScreen = () => {
     <View style={styles.container}>
       <Text style={styles.textM1}>Descarga tus recursos de estudio para practicar más!</Text>
       <View style={styles.viewContent}>
-        <View>
+        <View style={styles.contentMater}>
           <Image source={img1} />
+          <Text style={{ marginLeft: 7 }}>Definición de Conjuntos</Text>
+          <ButtonDowloand title="Descargar" />
+        </View>
+        <View style={styles.contentMater}>
+          <Image source={img1} />
+          <Text style={{ marginLeft: 7 }}>Definición de Conjuntos</Text>
+          <ButtonDowloand title="Descargar" />
+        </View>
+        <View style={styles.contentMater}>
+          <Image source={img1} />
+          <Text style={{ marginLeft: 7 }}>Definición de Conjuntos</Text>
+          <ButtonDowloand title="Descargar" />
+        </View>
+        <View style={styles.contentMater}>
+          <Image source={img1} />
+          <Text style={{ marginLeft: 7 }}>Definición de Conjuntos</Text>
+          <ButtonDowloand title="Descargar" />
+        </View>
+        <View style={styles.contentMater}>
+          <Image source={img1} />
+          <Text style={{ marginLeft: 7 }}>Definición de Conjuntos</Text>
+          <ButtonDowloand title="Descargar" />
+        </View>
+        <View style={styles.contentMater}>
+          <Image source={img1} />
+          <Text style={{ marginLeft: 7 }}>Definición de Conjuntos</Text>
+          <ButtonDowloand title="Descargar" />
         </View>
       </View>
     </View>

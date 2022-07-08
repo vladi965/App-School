@@ -86,6 +86,7 @@ export const styles = StyleSheet.create({
   btnTextOne: {
     color: "#000",
     fontSize: 15,
+    marginRight: 5
   },
   contentPrincipal: {
     marginTop: -5,
@@ -117,12 +118,6 @@ export const styles = StyleSheet.create({
     marginTop: -40,
   },
   emoji: {
-    height: 40,
-    width: 40,
-    fontSize: 25,
-    marginLeft: 10,
-  },
-  emojix: {
     height: 40,
     width: 40,
     fontSize: 25,
@@ -553,24 +548,34 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
-  viewContent: {
-    marginTop: 50,
-  },
+  
   //Button Dowloand
   contentButtonTwo: {
     flexDirection: "row",
   },
   btnContentDowloand: {
     height: 40,
-    width: 120,
+    width: 130,
     borderWidth: 1,
     borderRadius: 10,
     padding: 7,
     borderColor: "#7460F2",
+    backgroundColor: "#7460F2",
     justifyContent: "center",
     alignItems: "center",
+    marginLeft: 8
   },
-  btnTextOne: {
-    color: "#fff",
+  btnTextOne:{
+    color: '#fff',
+    marginRight: 5
   },
+  contentMater:{
+    flexDirection: 'row',
+    alignItems: "center",
+    alignContent: 'center',
+    justifyContent: 'center',
+    marginTop: 40
+  },
+  //Button Download
+
 });

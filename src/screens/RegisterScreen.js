@@ -76,7 +76,7 @@ const RegisterScreen = () => {
     }
   };
 
-  const LoginFormSchema
+ /*  const LoginFormSchema; */
 
   return (
     <SafeAreaView style={styles.container}>

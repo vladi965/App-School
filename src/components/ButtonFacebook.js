@@ -6,7 +6,7 @@ const facebook = require("../assets/general/facebook.png");
 
 const ButtonFacebook = ({ title, onPress }) => {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity>
       <View style={styles.btnContentTwo}>
         <View style={styles.contentButton}>
           <Image style={styles.imgGoogle} source={facebook} />
