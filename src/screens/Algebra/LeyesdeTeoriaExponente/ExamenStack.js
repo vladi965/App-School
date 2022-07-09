@@ -13,6 +13,16 @@ const img3 = require("../../../assets/algebra/ejercicios/basico/img3.png");
 const img4 = require("../../../assets/algebra/ejercicios/intermedio/img1.jpeg");
 const img5 = require("../../../assets/algebra/ejercicios/intermedio/img2.jpeg");
 const img6 = require("../../../assets/algebra/ejercicios/intermedio/img3.jpeg");
+const img7 = require("../../../assets/algebra/ejercicios/basico/img4.png");
+const img8 = require("../../../assets/algebra/ejercicios/basico/img5.png");
+const img9 = require("../../../assets/algebra/ejercicios/basico/img6.png");
+const img10 = require("../../../assets/algebra/ejercicios/intermedio/img4.jpeg");
+const img11 = require("../../../assets/algebra/ejercicios/intermedio/img5.jpeg");
+const img12 = require("../../../assets/algebra/ejercicios/intermedio/img6.jpeg");
+const img13 = require("../../../assets/algebra/ejercicios/basico/img2.png");
+const img14 = require("../../../assets/algebra/ejercicios/basico/img5.png");
+const img15 = require("../../../assets/algebra/ejercicios/basico/img4.png");
+
 
 const ExamenScreen = () => {
   const navigation = useNavigation();
@@ -43,105 +53,105 @@ const ExamenScreen = () => {
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>2. Simplifica</Text>
-          <View>
-            <Image source={img1} />
+          <View style={{ marginTop: 15 }}> 
+            <Image source={img2} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>3. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img3} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>4. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img4} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>5. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img5} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>6. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img6} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>7. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img7} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>8. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img8} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>9. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img9} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>10. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img10} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>11. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img11} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>12. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img12} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>13. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img13} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>14. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img14} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25, marginBottom: 25}}>
           <Text style={{ fontSize: 20, fontWeight: "bold" }}>15. Simplifica</Text>
           <View>
-            <Image source={img1} />
+            <Image source={img15} />
           </View>
           <ExamenView />
         </View>
-        
-        
-      
+        <View style={{ alignItems: 'center', justifyContent: 'center', marginBottom: 20}}>
+            <ButtonPrincipal title="Enviar" onPress={createTwoButtonAlert} />
+        </View>
       </ScrollView>
     </View>
   );
