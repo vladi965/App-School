@@ -5,7 +5,7 @@ import CountDown from 'react-native-countdown-component';
 const Countdown = () => {
   return (
     <CountDown style={{ marginLeft: 120}}
-      until={40 * 10 + 30}
+      until={90 * 50 + 30}
       size={30}
       onFinish={() => alert('Finalizo')}
       onPress={() => alert('Bien')}
