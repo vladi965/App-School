@@ -66,21 +66,21 @@ const ExamenScreen = () => {
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>4. Simplifica</Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>4. Calcula el valor de la operación</Text>
           <View>
             <Image source={img4} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>5. Simplifica</Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>5. Determinar el resultado</Text>
           <View>
             <Image source={img5} />
           </View>
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>6. Simplifica</Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>6. Hallar el valor</Text>
           <View>
             <Image source={img6} />
           </View>
@@ -122,7 +122,7 @@ const ExamenScreen = () => {
           <ExamenView />
         </View>
         <View style={{ marginTop: 50, marginHorizontal: 25}}>
-          <Text style={{ fontSize: 20, fontWeight: "bold" }}>12. Simplifica</Text>
+          <Text style={{ fontSize: 20, fontWeight: "bold" }}>12. Determinar el area del rectangulo</Text>
           <View>
             <Image source={img12} />
           </View>
